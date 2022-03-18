@@ -12,5 +12,48 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  const index = 0;
+  const cappedTutorials = tutorials.map((element) => {
+    const splitElement = element.split(' ')
+    const capSplitElement = splitElement.map((element) => {
+      return element.charAt(index).toUpperCase() + element.substring(1)
+    }) 
+    const backToString = capSplitElement.join(' ')
+    return backToString   
+  })
+  return cappedTutorials
 }
+
+titleCased()
+const string = "This is a string"
+
+const newString = string.split(' ')
+
+console.log(newString)
+
+const index = 0
+
+const cappedNewString = newString.map((element) => {
+  element.charAt(index).toUpperCase()
+  return element.charAt(index).toUpperCase() + element.substring(1)
+})
+
+const stringCapped = cappedNewString.join(' ')
+console.log(stringCapped)
+
+
+// const titleCased = () => {
+//   const index = 0;
+//   const arrayTutorials = tutorials.map((element) => element.split(' '))
+//   return arrayTutorials
+// }
+// console.log(titleCased())
+
+// const cappedElements = arrayTutorials.map((element) => {
+  //   return element.charAt(index).toUpperCase()     
+  // })
+  // return cappedElements 
+  // tutorials.map((element) => {
+  //   element.split(' ')
+  //   console.log(arrayTutorials)
+  // })
